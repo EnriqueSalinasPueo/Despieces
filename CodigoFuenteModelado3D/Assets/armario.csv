@@ -1,0 +1,12 @@
+20, 10, 20, 3, 3, 5, 5, 5, 5, 3, 25, 5, 10, 19, 10, 10, 40, 3, 10, 10, 10, 10, 700, 900
+2200, 1300, 600, 1, False, 2, L, False, False, False, 78, False, 100
+nombre,tag,cantidad,largo,ancho,grueso
+Costados,Costados,2,2102,590,19
+Bases,Bases,2,1182,590,19
+Altillo,,1,1182,590,19
+Trasera Inferior,Traseras,1,1785,1200,10
+Trasera Superior,Traseras,1,287,1200,10
+DM Puertas,DM,2,2080,597,10
+DM Tapajuntas,DM,2,2200,70,10
+DM Cornisa,DM,1,1210,30,10
+DM Rodapie,,1,1210,100,10
