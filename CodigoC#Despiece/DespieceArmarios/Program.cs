@@ -19,7 +19,7 @@ namespace DespieceArmarios
 
             DateTime Caducidad = new DateTime(2025,6,1);
 
-            if(DateTime.Now > Caducidad)
+            if(DateTime.Now > Caducidad) 
             {
                 MessageBox.Show("Licencia caducada");
                 Application.Exit();
