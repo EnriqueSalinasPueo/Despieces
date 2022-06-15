@@ -3,12 +3,6 @@ using DespieceArmarios.ClasesApoyo;
 using DespieceArmarios.ClasesBd;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DespieceArmarios.Formularios
@@ -29,7 +23,7 @@ namespace DespieceArmarios.Formularios
             this.nombreClinete = cliente;
             this.obra = obra;
             InitializeComponent();
-            this.Text += cliente + " " + obra;
+            this.Text = "Cliente: " + cliente + "  Obra: " + obra;
             Datos = new DatosFormArmariosObra();
 
             DarValoresPredeterminados();

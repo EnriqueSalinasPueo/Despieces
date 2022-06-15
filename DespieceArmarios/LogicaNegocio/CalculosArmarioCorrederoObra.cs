@@ -1109,6 +1109,7 @@ namespace DespieceArmarios.Clases
             }
         }
 
+        // TODO:Revisar cuanto montan las puertas dependiendo de la bisagra que pongas
         private int SacarAnchoPuertaAbatible()
         {
             int anchoPuerta = 0;
