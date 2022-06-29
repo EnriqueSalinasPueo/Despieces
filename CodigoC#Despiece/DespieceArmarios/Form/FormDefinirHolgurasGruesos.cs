@@ -2,15 +2,9 @@
 using Dapper.Contrib.Extensions;
 using DespieceArmarios.Clases;
 using DespieceArmarios.ClasesBd;
-using Microsoft.ReportingServices.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DespieceArmarios
@@ -57,33 +51,33 @@ namespace DespieceArmarios
 
         private void PonerDatosEnForm()
         {
-            numeric_Holgura_techo.Value = datos.H_techo;
-            numeric_Holgura_fondo.Value = datos.H_fondo;
-            numeric_Holgura_pared_abierta.Value = datos.H_pared;
-            numeric_Holgura_puertas_abatibles.Value = datos.H_puertas;
-            numeric_Holgura_entre_cajones.Value = datos.H_cajones;
-            numeric_Holgura_guia_corredera.Value = datos.H_guia;
-            numeric_Holgura_baldas_costado.Value = datos.H_baldas;
+            numHolguraTecho.Value = datos.H_techo;
+            numHolguraFondo.Value = datos.H_fondo;
+            numHolguraParedAbierta.Value = datos.H_pared;
+            numHolguraPuertasAbatibles.Value = datos.H_puertas;
+            numHolguraEntreCajones.Value = datos.H_cajones;
+            num_Holgura_guia_corredera.Value = datos.H_guia;
+            numHolguraBaldasCostado.Value = datos.H_baldas;
 
-            numeric_Montar_rodapie_base.Value = datos.M_rodapie;
-            numeric_Montar_tapajuntas_costado.Value = datos.M_tapajuntas;
-            numericUpDown_Montar_rodapie_guia.Value = datos.M_rodapie_guia;
-            numericUpDown_Montar_jacena.Value = datos.M_jacena;
+            numMontarRodapieBase.Value = datos.M_rodapie;
+            numMontarTapajuntasCostado.Value = datos.M_tapajuntas;
+            num_Montar_rodapie_guia.Value = datos.M_rodapie_guia;
+            numMontarJacena.Value = datos.M_jacena;
 
-            numericUpDown_Descolgar_cornisa.Value = datos.Descolgar_cornisa;
-            numeric_Grueso_trasera.Value = datos.G_traseras;
-            numeric_Grueso_costados.Value = datos.G_costados;
-            numeric_Grueso_puerta.Value = datos.G_puertas;
-            numeric_Grueso_puerta_corredera.Value = datos.G_correderas;
-            numeric_Grueso_guia_corredera.Value = datos.G_guia;
-            numeric_Grueso_apoyo_barra_lateral.Value = datos.G_apoyo_barra;
-            numericUpDown_Grueso_tapeta_remate.Value = datos.G_tapeta;
-            numericUpDown_Grueso_tapajuntas.Value = datos.G_tapajuntas;
-            numericUpDown__Grueso_cornisa.Value = datos.G_cornisa;
-            numericUpDown_Grueso_rodapie.Value = datos.G_rodapie;
+            num_Descolgar_cornisa.Value = datos.Descolgar_cornisa;
+            numGruesoTrasera.Value = datos.G_traseras;
+            numGruesoCostados.Value = datos.G_costados;
+            numGruesoPuerta.Value = datos.G_puertas;
+            num_Grueso_puerta_corredera.Value = datos.G_correderas;
+            num_Grueso_guia_corredera.Value = datos.G_guia;
+            numGruesoApoyoBarraLateral.Value = datos.G_apoyo_barra;
+            num_Grueso_tapeta_remate.Value = datos.G_tapeta;
+            numGruesoTapajuntas.Value = datos.G_tapajuntas;
+            numGruesoCornisa.Value = datos.G_cornisa;
+            numGruesoRodapie.Value = datos.G_rodapie;
 
-            numericUpDownMaxPuertas.Value = datos.max_puertas;
-            numericUpDownMaxCorrederas.Value = datos.max_correderas;
+            numMaxPuertas.Value = datos.max_puertas;
+            numMaxCorrederas.Value = datos.max_correderas;
 
         }
 
@@ -102,36 +96,36 @@ namespace DespieceArmarios
 
             /*****************************Casmbiar fotos cuando el foco esta en los numericUpDown***********************/
             //  Holguras Generales
-            numeric_Holgura_techo.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_TECHO; };
-            numeric_Holgura_fondo.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_FONDO; };
-            numeric_Holgura_entre_cajones.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_CAJON; };
-            numeric_Holgura_baldas_costado.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_BALDA; };
-            numeric_Holgura_pared_abierta.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_PARED; };
-            numeric_Holgura_puertas_abatibles.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_PUERTAS; };
+            numHolguraTecho.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_TECHO; };
+            numHolguraFondo.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_FONDO; };
+            numHolguraEntreCajones.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_CAJON; };
+            numHolguraBaldasCostado.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_BALDA; };
+            numHolguraParedAbierta.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_PARED; };
+            numHolguraPuertasAbatibles.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_PUERTAS; };
 
             //  Remates Exteriores
-            numeric_Montar_rodapie_base.Enter += (o, a) => { imagen.Image = Properties.Resources.MONTAR_RODAPIE; };
-            numeric_Montar_tapajuntas_costado.Enter += (o, a) => { imagen.Image = Properties.Resources.MONTAR_TAPAJUNTAS; };
-            numericUpDown_Montar_jacena.Enter += (o, a) => { imagen.Image = Properties.Resources.MONTAR_JACENA; };
-            numeric_Grueso_puerta.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_PUERTAS; };
-            numericUpDown_Grueso_rodapie.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_RODAPIE; };
-            numericUpDown_Grueso_tapajuntas.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_TAPAJUNTAS; };
-            numericUpDown__Grueso_cornisa.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_CORNISA; };
-            numericUpDownMaxPuertas.Enter += (o, a) => { imagen.Image = Properties.Resources.MAXIMO_PUERTAS; };
+            numMontarRodapieBase.Enter += (o, a) => { imagen.Image = Properties.Resources.MONTAR_RODAPIE; };
+            numMontarTapajuntasCostado.Enter += (o, a) => { imagen.Image = Properties.Resources.MONTAR_TAPAJUNTAS; };
+            numMontarJacena.Enter += (o, a) => { imagen.Image = Properties.Resources.MONTAR_JACENA; };
+            numGruesoPuerta.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_PUERTAS; };
+            numGruesoRodapie.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_RODAPIE; };
+            numGruesoTapajuntas.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_TAPAJUNTAS; };
+            numGruesoCornisa.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_CORNISA; };
+            numMaxPuertas.Enter += (o, a) => { imagen.Image = Properties.Resources.MAXIMO_PUERTAS; };
 
             //  Opciones Corredero
-            numeric_Holgura_guia_corredera.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_GUIA; };
-            numericUpDownMaxCorrederas.Enter += (o, a) => { imagen.Image = Properties.Resources.MAXIMO_CORREDERAS; };
-            numeric_Grueso_guia_corredera.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_GUIA; };
-            numeric_Grueso_puerta_corredera.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_CORREDERAS; };
-            numericUpDown_Grueso_tapeta_remate.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_TAPETA; };
-            numericUpDown_Descolgar_cornisa.Enter += (o, a) => { imagen.Image = Properties.Resources.DESCOLGAR_CORNISA; };
-            numericUpDown_Montar_rodapie_guia.Enter += (o, a) => { imagen.Image = Properties.Resources.MONTAR_RODAPIE_GUIA; };
+            num_Holgura_guia_corredera.Enter += (o, a) => { imagen.Image = Properties.Resources.HOLGURA_GUIA; };
+            numMaxCorrederas.Enter += (o, a) => { imagen.Image = Properties.Resources.MAXIMO_CORREDERAS; };
+            num_Grueso_guia_corredera.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_GUIA; };
+            num_Grueso_puerta_corredera.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_CORREDERAS; };
+            num_Grueso_tapeta_remate.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_TAPETA; };
+            num_Descolgar_cornisa.Enter += (o, a) => { imagen.Image = Properties.Resources.DESCOLGAR_CORNISA; };
+            num_Montar_rodapie_guia.Enter += (o, a) => { imagen.Image = Properties.Resources.MONTAR_RODAPIE_GUIA; };
 
             //  interior modulo
-            numeric_Grueso_apoyo_barra_lateral.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_APOYO_BARRA; };
-            numeric_Grueso_costados.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_COSTADOS; };
-            numeric_Grueso_trasera.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_TRASERAS; };
+            numGruesoApoyoBarraLateral.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_APOYO_BARRA; };
+            numGruesoCostados.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_COSTADOS; };
+            numGruesoTrasera.Enter += (o, a) => { imagen.Image = Properties.Resources.GRUESO_TRASERAS; };
         }
 
         private void apagarGroupBox()
@@ -158,33 +152,33 @@ namespace DespieceArmarios
 
                 parametros.id_holgurasGruesos = 1;
 
-                parametros.H_techo = numeric_Holgura_techo.Value;
-                parametros.H_fondo = numeric_Holgura_fondo.Value;
-                parametros.H_pared = numeric_Holgura_pared_abierta.Value;
-                parametros.H_puertas = numeric_Holgura_puertas_abatibles.Value;
-                parametros.H_cajones = numeric_Holgura_entre_cajones.Value;
-                parametros.H_guia = numeric_Holgura_guia_corredera.Value;
-                parametros.H_baldas = numeric_Holgura_baldas_costado.Value;
+                parametros.H_techo = numHolguraTecho.Value;
+                parametros.H_fondo = numHolguraFondo.Value;
+                parametros.H_pared = numHolguraParedAbierta.Value;
+                parametros.H_puertas = numHolguraPuertasAbatibles.Value;
+                parametros.H_cajones = numHolguraEntreCajones.Value;
+                parametros.H_guia = num_Holgura_guia_corredera.Value;
+                parametros.H_baldas = numHolguraBaldasCostado.Value;
 
-                parametros.M_rodapie = numeric_Montar_rodapie_base.Value;
-                parametros.M_tapajuntas = numeric_Montar_tapajuntas_costado.Value;
-                parametros.M_rodapie_guia = numericUpDown_Montar_rodapie_guia.Value;
-                parametros.M_jacena = numericUpDown_Montar_jacena.Value;
+                parametros.M_rodapie = numMontarRodapieBase.Value;
+                parametros.M_tapajuntas = numMontarTapajuntasCostado.Value;
+                parametros.M_rodapie_guia = num_Montar_rodapie_guia.Value;
+                parametros.M_jacena = numMontarJacena.Value;
 
-                parametros.Descolgar_cornisa = numericUpDown_Descolgar_cornisa.Value;
-                parametros.G_traseras = numeric_Grueso_trasera.Value;
-                parametros.G_costados = numeric_Grueso_costados.Value;
-                parametros.G_puertas = numeric_Grueso_puerta.Value;
-                parametros.G_correderas = numeric_Grueso_puerta_corredera.Value;
-                parametros.G_guia = numeric_Grueso_guia_corredera.Value;
-                parametros.G_apoyo_barra = numeric_Grueso_apoyo_barra_lateral.Value;
-                parametros.G_tapeta = numericUpDown_Grueso_tapeta_remate.Value;
-                parametros.G_tapajuntas = numericUpDown_Grueso_tapajuntas.Value;
-                parametros.G_cornisa = numericUpDown__Grueso_cornisa.Value;
-                parametros.G_rodapie = numericUpDown_Grueso_rodapie.Value;
+                parametros.Descolgar_cornisa = num_Descolgar_cornisa.Value;
+                parametros.G_traseras = numGruesoTrasera.Value;
+                parametros.G_costados = numGruesoCostados.Value;
+                parametros.G_puertas = numGruesoPuerta.Value;
+                parametros.G_correderas = num_Grueso_puerta_corredera.Value;
+                parametros.G_guia = num_Grueso_guia_corredera.Value;
+                parametros.G_apoyo_barra = numGruesoApoyoBarraLateral.Value;
+                parametros.G_tapeta = num_Grueso_tapeta_remate.Value;
+                parametros.G_tapajuntas = numGruesoTapajuntas.Value;
+                parametros.G_cornisa = numGruesoCornisa.Value;
+                parametros.G_rodapie = numGruesoRodapie.Value;
 
-                parametros.max_puertas = numericUpDownMaxPuertas.Value;
-                parametros.max_correderas = numericUpDownMaxCorrederas.Value;
+                parametros.max_puertas = numMaxPuertas.Value;
+                parametros.max_correderas = numMaxCorrederas.Value;
 
                 using (var conn = Bd.GetConnection())
                 {

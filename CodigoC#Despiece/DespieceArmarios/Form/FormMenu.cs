@@ -1,13 +1,6 @@
 ﻿using DespieceArmarios.Clases;
 using DespieceArmarios.Formularios;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DespieceArmarios
@@ -29,8 +22,14 @@ namespace DespieceArmarios
 
         private void EngancharEventos()
         {
-            buttonParticular.Click += ButtonParticular_Click;
-            buttonArmariosObra.Click += ButtonArmariosObra_Click;
+            btnParticular.Click += ButtonParticular_Click;
+            btnArmariosObra.Click += ButtonArmariosObra_Click;
+            btnCajonera.Click += BtnCajonera_Click;
+        }
+
+        private void BtnCajonera_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void ButtonArmariosObra_Click(object sender, EventArgs e)
@@ -48,8 +47,9 @@ namespace DespieceArmarios
         private void Configuracion()
         {
             ConfiguracionElementos.miForm(this);
-            ConfiguracionElementos.miButtonInicio(buttonArmariosObra);
-            ConfiguracionElementos.miButtonInicio(buttonParticular);
+            ConfiguracionElementos.miButtonInicio(btnArmariosObra);
+            ConfiguracionElementos.miButtonInicio(btnParticular);
+            ConfiguracionElementos.miButtonInicio(btnCajonera);
         }
     }
 }
