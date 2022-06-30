@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace DespieceArmarios.Formularios
 {
-    public partial class FormImpresion : Form
+    public partial class FormImpresion : System.Windows.Forms.Form
     {
         private List<ArmarioFull> armarios;
         private List<MedidasTotales> medidasTotales;

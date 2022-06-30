@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace DespieceArmarios
 {
-    public partial class FormDefinirHolgurasGruesos : Form
+    public partial class FormDefinirHolgurasGruesos : System.Windows.Forms.Form
     {
         private DefinirHolgurasGruesos datos = new DefinirHolgurasGruesos();
         private bool dat = false;

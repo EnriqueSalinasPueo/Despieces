@@ -15,7 +15,7 @@ using DespieceArmarios.ClasesBd;
 
 namespace DespieceArmarios
 {
-    public partial class FormInicio : Form
+    public partial class FormInicio : System.Windows.Forms.Form
     {
         private string nombreCliente;
         private string nombreObra;

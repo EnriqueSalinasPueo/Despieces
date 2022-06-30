@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace DespieceArmarios.Formularios
 {
-    public partial class FormVerDatos : Form
+    public partial class FormVerDatos : System.Windows.Forms.Form
     {
         private List<Cliente> clientes = null;
         private List<Obra> obras = null;

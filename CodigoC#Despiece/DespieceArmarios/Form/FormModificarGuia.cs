@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace DespieceArmarios
 {
-    public partial class FormModificarGuia : Form
+    public partial class FormModificarGuia : System.Windows.Forms.Form
     {
         public FormModificarGuia()
         {

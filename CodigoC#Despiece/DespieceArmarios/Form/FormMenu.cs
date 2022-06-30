@@ -2,10 +2,11 @@
 using DespieceArmarios.Formularios;
 using System;
 using System.Windows.Forms;
+using DespieceArmarios.Form;
 
 namespace DespieceArmarios
 {
-    public partial class FormMenu : Form
+    public partial class FormMenu : System.Windows.Forms.Form
     {
         public string Obra { get; set; }
         public string Cliente { get; set; }
@@ -29,7 +30,8 @@ namespace DespieceArmarios
 
         private void BtnCajonera_Click(object sender, EventArgs e)
         {
-
+            var formCajonera = new FormCajonera();
+            formCajonera.ShowDialog();
         }
 
         private void ButtonArmariosObra_Click(object sender, EventArgs e)

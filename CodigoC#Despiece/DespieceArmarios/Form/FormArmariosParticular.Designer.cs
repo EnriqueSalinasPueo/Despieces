@@ -636,7 +636,7 @@
             this.groupBoxCajonera.Size = new System.Drawing.Size(146, 347);
             this.groupBoxCajonera.TabIndex = 40;
             this.groupBoxCajonera.TabStop = false;
-            this.groupBoxCajonera.Text = "Cajonera";
+            this.groupBoxCajonera.Text = "FormCajonera";
             this.groupBoxCajonera.Visible = false;
             // 
             // groupBoxAlturaCajon

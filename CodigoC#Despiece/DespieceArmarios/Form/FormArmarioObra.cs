@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace DespieceArmarios.Formularios
 {
-    public partial class FormArmarioObra : Form
+    public partial class FormArmarioObra : System.Windows.Forms.Form
     {
         private List<ArmarioPiezas> armarios = new List<ArmarioPiezas>();
         private List<MedidasTotales> medidas = new List<MedidasTotales>();

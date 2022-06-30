@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace DespieceArmarios
 {
-    public partial class FomrArmariosParticular : Form
+    public partial class FomrArmariosParticular : System.Windows.Forms.Form
     {
         private int editandoModuloPintar = -1;
         private int numeroModulo;

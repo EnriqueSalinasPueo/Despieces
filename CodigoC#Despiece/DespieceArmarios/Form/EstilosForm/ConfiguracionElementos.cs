@@ -45,7 +45,7 @@ namespace DespieceArmarios.Clases
             comboBox.ForeColor = colorTextoElementos;
         }
 
-        public static void miForm(Form form)
+        public static void miForm(System.Windows.Forms.Form form)
         {
             form.BackColor = colorFondoForm;
             //form.Icon = iconoVentanas;
