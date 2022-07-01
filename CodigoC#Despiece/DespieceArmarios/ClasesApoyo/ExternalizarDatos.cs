@@ -4,9 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DespieceArmarios.ClasesApoyo
@@ -43,7 +41,7 @@ namespace DespieceArmarios.ClasesApoyo
             
             //**  Ejecutar el punto exe generado de Unity  **/
             var ruta = Path.GetDirectoryName(Application.ExecutablePath);
-            Process.Start(ruta + "\\modelo3D\\DiseñoArmarios.exe");
+            //Process.Start(ruta + "\\modelo3D\\DiseñoArmarios.exe");// Ruta para ejecutar el 
 
         }
     }

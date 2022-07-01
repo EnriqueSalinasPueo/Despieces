@@ -33,6 +33,15 @@ namespace DespieceArmarios.Form
             this.pnlAreaControl = new System.Windows.Forms.Panel();
             this.pnlDatos = new System.Windows.Forms.Panel();
             this.pnlDatosMargenInferior = new System.Windows.Forms.Panel();
+            this.btnGuias = new System.Windows.Forms.Button();
+            this.grpbGuia = new System.Windows.Forms.GroupBox();
+            this.pnlGuia = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.pnlGuiaDesc = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlDatosMargenCentral = new System.Windows.Forms.Panel();
             this.grpbCajonera = new System.Windows.Forms.GroupBox();
             this.pnlCajonera = new System.Windows.Forms.Panel();
@@ -61,7 +70,7 @@ namespace DespieceArmarios.Form
             this.pnlVisionado = new System.Windows.Forms.Panel();
             this.pnlVisionadoMargenInferior = new System.Windows.Forms.Panel();
             this.pnlVisionadoMargenCentral = new System.Windows.Forms.Panel();
-            this.btnGuardarDatos = new System.Windows.Forms.Button();
+            this.btnSacarMedidas = new System.Windows.Forms.Button();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pnlVisionadoMargenSuperio = new System.Windows.Forms.Panel();
@@ -72,19 +81,34 @@ namespace DespieceArmarios.Form
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.grpbGuia = new System.Windows.Forms.GroupBox();
-            this.pnlGuia = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.pnlGuiaDesc = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnCargarGuias = new System.Windows.Forms.Button();
+            this.grpbHuecoCajonera = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblHuecoAlto = new System.Windows.Forms.Label();
+            this.numHuecoAlto = new System.Windows.Forms.NumericUpDown();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lblHuecoFondo = new System.Windows.Forms.Label();
+            this.numHuecoFondo = new System.Windows.Forms.NumericUpDown();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lblHuecoAncho = new System.Windows.Forms.Label();
+            this.numHuecoAncho = new System.Windows.Forms.NumericUpDown();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.lblHuecoAltoDesc = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.lblHuecoFondoDesc = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.lblHuecoAnchoDesc = new System.Windows.Forms.Label();
             this.pnlCajoneraGlobal.SuspendLayout();
             this.pnlAreaControl.SuspendLayout();
             this.pnlDatos.SuspendLayout();
             this.pnlDatosMargenInferior.SuspendLayout();
+            this.grpbGuia.SuspendLayout();
+            this.pnlGuia.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.pnlGuiaDesc.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.pnlDatosMargenCentral.SuspendLayout();
             this.grpbCajonera.SuspendLayout();
             this.pnlCajonera.SuspendLayout();
@@ -107,12 +131,18 @@ namespace DespieceArmarios.Form
             this.pnlMilimetros.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.grpbGuia.SuspendLayout();
-            this.pnlGuia.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            this.pnlGuiaDesc.SuspendLayout();
-            this.panel13.SuspendLayout();
+            this.grpbHuecoCajonera.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHuecoAlto)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHuecoFondo)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHuecoAncho)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCajoneraGlobal
@@ -150,35 +180,130 @@ namespace DespieceArmarios.Form
             // 
             // pnlDatosMargenInferior
             // 
-            this.pnlDatosMargenInferior.Controls.Add(this.btnCargarGuias);
+            this.pnlDatosMargenInferior.Controls.Add(this.btnGuias);
             this.pnlDatosMargenInferior.Controls.Add(this.grpbGuia);
             this.pnlDatosMargenInferior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDatosMargenInferior.Location = new System.Drawing.Point(0, 230);
+            this.pnlDatosMargenInferior.Location = new System.Drawing.Point(0, 319);
             this.pnlDatosMargenInferior.Name = "pnlDatosMargenInferior";
             this.pnlDatosMargenInferior.Padding = new System.Windows.Forms.Padding(5);
             this.pnlDatosMargenInferior.Size = new System.Drawing.Size(546, 253);
             this.pnlDatosMargenInferior.TabIndex = 5;
             // 
+            // btnGuias
+            // 
+            this.btnGuias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGuias.Location = new System.Drawing.Point(5, 133);
+            this.btnGuias.Name = "btnGuias";
+            this.btnGuias.Size = new System.Drawing.Size(536, 23);
+            this.btnGuias.TabIndex = 4;
+            this.btnGuias.Text = "Guias";
+            this.btnGuias.UseVisualStyleBackColor = true;
+            // 
+            // grpbGuia
+            // 
+            this.grpbGuia.Controls.Add(this.pnlGuia);
+            this.grpbGuia.Controls.Add(this.pnlGuiaDesc);
+            this.grpbGuia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpbGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbGuia.Location = new System.Drawing.Point(5, 5);
+            this.grpbGuia.Name = "grpbGuia";
+            this.grpbGuia.Padding = new System.Windows.Forms.Padding(5);
+            this.grpbGuia.Size = new System.Drawing.Size(536, 128);
+            this.grpbGuia.TabIndex = 3;
+            this.grpbGuia.TabStop = false;
+            this.grpbGuia.Text = "Guia";
+            // 
+            // pnlGuia
+            // 
+            this.pnlGuia.Controls.Add(this.panel8);
+            this.pnlGuia.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlGuia.Location = new System.Drawing.Point(7, 27);
+            this.pnlGuia.Name = "pnlGuia";
+            this.pnlGuia.Size = new System.Drawing.Size(222, 96);
+            this.pnlGuia.TabIndex = 3;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label4);
+            this.panel8.Controls.Add(this.numericUpDown4);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(222, 30);
+            this.panel8.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 0);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.label4.Size = new System.Drawing.Size(109, 18);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Numero Cajones";
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown4.Location = new System.Drawing.Point(126, 0);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(96, 22);
+            this.numericUpDown4.TabIndex = 1;
+            // 
+            // pnlGuiaDesc
+            // 
+            this.pnlGuiaDesc.Controls.Add(this.panel13);
+            this.pnlGuiaDesc.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlGuiaDesc.Location = new System.Drawing.Point(229, 27);
+            this.pnlGuiaDesc.Name = "pnlGuiaDesc";
+            this.pnlGuiaDesc.Size = new System.Drawing.Size(302, 96);
+            this.pnlGuiaDesc.TabIndex = 2;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.label8);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(4);
+            this.panel13.Size = new System.Drawing.Size(302, 30);
+            this.panel13.TabIndex = 3;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(4, 4);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(213, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Cuantos cajones tiene la cajonera.";
+            // 
             // pnlDatosMargenCentral
             // 
             this.pnlDatosMargenCentral.Controls.Add(this.grpbCajonera);
+            this.pnlDatosMargenCentral.Controls.Add(this.grpbHuecoCajonera);
             this.pnlDatosMargenCentral.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDatosMargenCentral.Location = new System.Drawing.Point(0, 17);
             this.pnlDatosMargenCentral.Name = "pnlDatosMargenCentral";
             this.pnlDatosMargenCentral.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlDatosMargenCentral.Size = new System.Drawing.Size(546, 213);
+            this.pnlDatosMargenCentral.Size = new System.Drawing.Size(546, 302);
             this.pnlDatosMargenCentral.TabIndex = 4;
             // 
             // grpbCajonera
             // 
             this.grpbCajonera.Controls.Add(this.pnlCajonera);
             this.grpbCajonera.Controls.Add(this.pnlCajoneraDesc);
-            this.grpbCajonera.Dock = System.Windows.Forms.DockStyle.Right;
+            this.grpbCajonera.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpbCajonera.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbCajonera.Location = new System.Drawing.Point(3, 10);
+            this.grpbCajonera.Location = new System.Drawing.Point(10, 136);
             this.grpbCajonera.Name = "grpbCajonera";
             this.grpbCajonera.Padding = new System.Windows.Forms.Padding(5);
-            this.grpbCajonera.Size = new System.Drawing.Size(533, 193);
+            this.grpbCajonera.Size = new System.Drawing.Size(526, 157);
             this.grpbCajonera.TabIndex = 2;
             this.grpbCajonera.TabStop = false;
             this.grpbCajonera.Text = "Cajonera";
@@ -190,9 +315,9 @@ namespace DespieceArmarios.Form
             this.pnlCajonera.Controls.Add(this.pnlAlturaCajon);
             this.pnlCajonera.Controls.Add(this.pnlNumeroCajoenes);
             this.pnlCajonera.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlCajonera.Location = new System.Drawing.Point(4, 27);
+            this.pnlCajonera.Location = new System.Drawing.Point(-3, 27);
             this.pnlCajonera.Name = "pnlCajonera";
-            this.pnlCajonera.Size = new System.Drawing.Size(222, 161);
+            this.pnlCajonera.Size = new System.Drawing.Size(222, 125);
             this.pnlCajonera.TabIndex = 3;
             // 
             // pnlOrejaDerecha
@@ -326,9 +451,9 @@ namespace DespieceArmarios.Form
             this.pnlCajoneraDesc.Controls.Add(this.pnlAlturaCajonDesc);
             this.pnlCajoneraDesc.Controls.Add(this.pnlNumeroCajonesDesc);
             this.pnlCajoneraDesc.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlCajoneraDesc.Location = new System.Drawing.Point(226, 27);
+            this.pnlCajoneraDesc.Location = new System.Drawing.Point(219, 27);
             this.pnlCajoneraDesc.Name = "pnlCajoneraDesc";
-            this.pnlCajoneraDesc.Size = new System.Drawing.Size(302, 161);
+            this.pnlCajoneraDesc.Size = new System.Drawing.Size(302, 125);
             this.pnlCajoneraDesc.TabIndex = 2;
             // 
             // pnlOrejaDerechaDesc
@@ -438,32 +563,32 @@ namespace DespieceArmarios.Form
             // pnlVisionadoMargenInferior
             // 
             this.pnlVisionadoMargenInferior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlVisionadoMargenInferior.Location = new System.Drawing.Point(0, 478);
+            this.pnlVisionadoMargenInferior.Location = new System.Drawing.Point(0, 475);
             this.pnlVisionadoMargenInferior.Name = "pnlVisionadoMargenInferior";
             this.pnlVisionadoMargenInferior.Size = new System.Drawing.Size(473, 150);
             this.pnlVisionadoMargenInferior.TabIndex = 97;
             // 
             // pnlVisionadoMargenCentral
             // 
-            this.pnlVisionadoMargenCentral.Controls.Add(this.btnGuardarDatos);
+            this.pnlVisionadoMargenCentral.Controls.Add(this.btnSacarMedidas);
             this.pnlVisionadoMargenCentral.Controls.Add(this.imagen);
             this.pnlVisionadoMargenCentral.Controls.Add(this.btnSalir);
             this.pnlVisionadoMargenCentral.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlVisionadoMargenCentral.Location = new System.Drawing.Point(0, 32);
             this.pnlVisionadoMargenCentral.Name = "pnlVisionadoMargenCentral";
-            this.pnlVisionadoMargenCentral.Size = new System.Drawing.Size(473, 446);
+            this.pnlVisionadoMargenCentral.Size = new System.Drawing.Size(473, 443);
             this.pnlVisionadoMargenCentral.TabIndex = 95;
             // 
-            // btnGuardarDatos
+            // btnSacarMedidas
             // 
-            this.btnGuardarDatos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGuardarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarDatos.Location = new System.Drawing.Point(0, 413);
-            this.btnGuardarDatos.Name = "btnGuardarDatos";
-            this.btnGuardarDatos.Size = new System.Drawing.Size(473, 38);
-            this.btnGuardarDatos.TabIndex = 94;
-            this.btnGuardarDatos.Text = "Guardar datos";
-            this.btnGuardarDatos.UseVisualStyleBackColor = true;
+            this.btnSacarMedidas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSacarMedidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSacarMedidas.Location = new System.Drawing.Point(0, 413);
+            this.btnSacarMedidas.Name = "btnSacarMedidas";
+            this.btnSacarMedidas.Size = new System.Drawing.Size(473, 38);
+            this.btnSacarMedidas.TabIndex = 94;
+            this.btnSacarMedidas.Text = "Sacar medidas";
+            this.btnSacarMedidas.UseVisualStyleBackColor = true;
             // 
             // imagen
             // 
@@ -563,99 +688,197 @@ namespace DespieceArmarios.Form
             this.panel3.Size = new System.Drawing.Size(204, 35);
             this.panel3.TabIndex = 2;
             // 
-            // grpbGuia
+            // grpbHuecoCajonera
             // 
-            this.grpbGuia.Controls.Add(this.pnlGuia);
-            this.grpbGuia.Controls.Add(this.pnlGuiaDesc);
-            this.grpbGuia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpbGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbGuia.Location = new System.Drawing.Point(5, 5);
-            this.grpbGuia.Name = "grpbGuia";
-            this.grpbGuia.Padding = new System.Windows.Forms.Padding(5);
-            this.grpbGuia.Size = new System.Drawing.Size(536, 216);
-            this.grpbGuia.TabIndex = 3;
-            this.grpbGuia.TabStop = false;
-            this.grpbGuia.Text = "Guia";
+            this.grpbHuecoCajonera.Controls.Add(this.panel1);
+            this.grpbHuecoCajonera.Controls.Add(this.panel10);
+            this.grpbHuecoCajonera.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpbHuecoCajonera.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbHuecoCajonera.Location = new System.Drawing.Point(10, 10);
+            this.grpbHuecoCajonera.Name = "grpbHuecoCajonera";
+            this.grpbHuecoCajonera.Padding = new System.Windows.Forms.Padding(5);
+            this.grpbHuecoCajonera.Size = new System.Drawing.Size(526, 126);
+            this.grpbHuecoCajonera.TabIndex = 4;
+            this.grpbHuecoCajonera.TabStop = false;
+            this.grpbHuecoCajonera.Text = "Hueco Cajonera";
             // 
-            // pnlGuia
+            // panel1
             // 
-            this.pnlGuia.Controls.Add(this.panel8);
-            this.pnlGuia.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlGuia.Location = new System.Drawing.Point(7, 27);
-            this.pnlGuia.Name = "pnlGuia";
-            this.pnlGuia.Size = new System.Drawing.Size(222, 184);
-            this.pnlGuia.TabIndex = 3;
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(-3, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(222, 94);
+            this.panel1.TabIndex = 3;
             // 
-            // panel8
+            // panel6
             // 
-            this.panel8.Controls.Add(this.label4);
-            this.panel8.Controls.Add(this.numericUpDown4);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(222, 30);
-            this.panel8.TabIndex = 3;
+            this.panel6.Controls.Add(this.lblHuecoAlto);
+            this.panel6.Controls.Add(this.numHuecoAlto);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 60);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(222, 30);
+            this.panel6.TabIndex = 5;
             // 
-            // label4
+            // lblHuecoAlto
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.label4.Size = new System.Drawing.Size(109, 18);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Numero Cajones";
+            this.lblHuecoAlto.AutoSize = true;
+            this.lblHuecoAlto.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblHuecoAlto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHuecoAlto.Location = new System.Drawing.Point(53, 0);
+            this.lblHuecoAlto.Name = "lblHuecoAlto";
+            this.lblHuecoAlto.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lblHuecoAlto.Size = new System.Drawing.Size(73, 18);
+            this.lblHuecoAlto.TabIndex = 0;
+            this.lblHuecoAlto.Text = "Hueco alto";
             // 
-            // numericUpDown4
+            // numHuecoAlto
             // 
-            this.numericUpDown4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(126, 0);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(96, 22);
-            this.numericUpDown4.TabIndex = 1;
+            this.numHuecoAlto.Dock = System.Windows.Forms.DockStyle.Right;
+            this.numHuecoAlto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numHuecoAlto.Location = new System.Drawing.Point(126, 0);
+            this.numHuecoAlto.Name = "numHuecoAlto";
+            this.numHuecoAlto.Size = new System.Drawing.Size(96, 22);
+            this.numHuecoAlto.TabIndex = 1;
             // 
-            // pnlGuiaDesc
+            // panel7
             // 
-            this.pnlGuiaDesc.Controls.Add(this.panel13);
-            this.pnlGuiaDesc.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlGuiaDesc.Location = new System.Drawing.Point(229, 27);
-            this.pnlGuiaDesc.Name = "pnlGuiaDesc";
-            this.pnlGuiaDesc.Size = new System.Drawing.Size(302, 184);
-            this.pnlGuiaDesc.TabIndex = 2;
+            this.panel7.Controls.Add(this.lblHuecoFondo);
+            this.panel7.Controls.Add(this.numHuecoFondo);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 30);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(222, 30);
+            this.panel7.TabIndex = 4;
             // 
-            // panel13
+            // lblHuecoFondo
             // 
-            this.panel13.Controls.Add(this.label8);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Padding = new System.Windows.Forms.Padding(4);
-            this.panel13.Size = new System.Drawing.Size(302, 30);
-            this.panel13.TabIndex = 3;
+            this.lblHuecoFondo.AutoSize = true;
+            this.lblHuecoFondo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblHuecoFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHuecoFondo.Location = new System.Drawing.Point(41, 0);
+            this.lblHuecoFondo.Name = "lblHuecoFondo";
+            this.lblHuecoFondo.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lblHuecoFondo.Size = new System.Drawing.Size(85, 18);
+            this.lblHuecoFondo.TabIndex = 0;
+            this.lblHuecoFondo.Text = "Hueco fondo";
             // 
-            // label8
+            // numHuecoFondo
             // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(4, 4);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(213, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Cuantos cajones tiene la cajonera.";
+            this.numHuecoFondo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.numHuecoFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numHuecoFondo.Location = new System.Drawing.Point(126, 0);
+            this.numHuecoFondo.Name = "numHuecoFondo";
+            this.numHuecoFondo.Size = new System.Drawing.Size(96, 22);
+            this.numHuecoFondo.TabIndex = 1;
             // 
-            // btnCargarGuias
+            // panel9
             // 
-            this.btnCargarGuias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCargarGuias.Location = new System.Drawing.Point(5, 221);
-            this.btnCargarGuias.Name = "btnCargarGuias";
-            this.btnCargarGuias.Size = new System.Drawing.Size(536, 23);
-            this.btnCargarGuias.TabIndex = 4;
-            this.btnCargarGuias.Text = "Guias";
-            this.btnCargarGuias.UseVisualStyleBackColor = true;
+            this.panel9.Controls.Add(this.lblHuecoAncho);
+            this.panel9.Controls.Add(this.numHuecoAncho);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(222, 30);
+            this.panel9.TabIndex = 3;
+            // 
+            // lblHuecoAncho
+            // 
+            this.lblHuecoAncho.AutoSize = true;
+            this.lblHuecoAncho.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblHuecoAncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHuecoAncho.Location = new System.Drawing.Point(38, 0);
+            this.lblHuecoAncho.Name = "lblHuecoAncho";
+            this.lblHuecoAncho.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lblHuecoAncho.Size = new System.Drawing.Size(88, 18);
+            this.lblHuecoAncho.TabIndex = 0;
+            this.lblHuecoAncho.Text = "Hueco ancho";
+            // 
+            // numHuecoAncho
+            // 
+            this.numHuecoAncho.Dock = System.Windows.Forms.DockStyle.Right;
+            this.numHuecoAncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numHuecoAncho.Location = new System.Drawing.Point(126, 0);
+            this.numHuecoAncho.Name = "numHuecoAncho";
+            this.numHuecoAncho.Size = new System.Drawing.Size(96, 22);
+            this.numHuecoAncho.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.panel12);
+            this.panel10.Controls.Add(this.panel14);
+            this.panel10.Controls.Add(this.panel15);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(219, 27);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(302, 94);
+            this.panel10.TabIndex = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.lblHuecoAltoDesc);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 60);
+            this.panel12.Name = "panel12";
+            this.panel12.Padding = new System.Windows.Forms.Padding(4);
+            this.panel12.Size = new System.Drawing.Size(302, 30);
+            this.panel12.TabIndex = 5;
+            // 
+            // lblHuecoAltoDesc
+            // 
+            this.lblHuecoAltoDesc.AutoSize = true;
+            this.lblHuecoAltoDesc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblHuecoAltoDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHuecoAltoDesc.Location = new System.Drawing.Point(4, 4);
+            this.lblHuecoAltoDesc.Name = "lblHuecoAltoDesc";
+            this.lblHuecoAltoDesc.Size = new System.Drawing.Size(259, 16);
+            this.lblHuecoAltoDesc.TabIndex = 0;
+            this.lblHuecoAltoDesc.Text = "Medida de alto en el hueco de la cajonera";
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.lblHuecoFondoDesc);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 30);
+            this.panel14.Name = "panel14";
+            this.panel14.Padding = new System.Windows.Forms.Padding(4);
+            this.panel14.Size = new System.Drawing.Size(302, 30);
+            this.panel14.TabIndex = 4;
+            // 
+            // lblHuecoFondoDesc
+            // 
+            this.lblHuecoFondoDesc.AutoSize = true;
+            this.lblHuecoFondoDesc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblHuecoFondoDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHuecoFondoDesc.Location = new System.Drawing.Point(4, 4);
+            this.lblHuecoFondoDesc.Name = "lblHuecoFondoDesc";
+            this.lblHuecoFondoDesc.Size = new System.Drawing.Size(271, 16);
+            this.lblHuecoFondoDesc.TabIndex = 0;
+            this.lblHuecoFondoDesc.Text = "Medida de fondo en el hueco de la cajonera";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.lblHuecoAnchoDesc);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Padding = new System.Windows.Forms.Padding(4);
+            this.panel15.Size = new System.Drawing.Size(302, 30);
+            this.panel15.TabIndex = 3;
+            // 
+            // lblHuecoAnchoDesc
+            // 
+            this.lblHuecoAnchoDesc.AutoSize = true;
+            this.lblHuecoAnchoDesc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblHuecoAnchoDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHuecoAnchoDesc.Location = new System.Drawing.Point(4, 4);
+            this.lblHuecoAnchoDesc.Name = "lblHuecoAnchoDesc";
+            this.lblHuecoAnchoDesc.Size = new System.Drawing.Size(274, 16);
+            this.lblHuecoAnchoDesc.TabIndex = 0;
+            this.lblHuecoAnchoDesc.Text = "Medida de ancho en el hueco de la cajonera";
             // 
             // FormCajonera
             // 
@@ -670,6 +893,14 @@ namespace DespieceArmarios.Form
             this.pnlAreaControl.ResumeLayout(false);
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatosMargenInferior.ResumeLayout(false);
+            this.grpbGuia.ResumeLayout(false);
+            this.pnlGuia.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            this.pnlGuiaDesc.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.pnlDatosMargenCentral.ResumeLayout(false);
             this.grpbCajonera.ResumeLayout(false);
             this.pnlCajonera.ResumeLayout(false);
@@ -702,14 +933,24 @@ namespace DespieceArmarios.Form
             this.pnlTitulo.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.grpbGuia.ResumeLayout(false);
-            this.pnlGuia.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            this.pnlGuiaDesc.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
+            this.grpbHuecoCajonera.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHuecoAlto)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHuecoFondo)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHuecoAncho)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -729,7 +970,7 @@ namespace DespieceArmarios.Form
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlVisionadoMargenInferior;
         private System.Windows.Forms.Panel pnlVisionadoMargenCentral;
-        private System.Windows.Forms.Button btnGuardarDatos;
+        private System.Windows.Forms.Button btnSacarMedidas;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel pnlVisionadoMargenSuperio;
@@ -759,7 +1000,7 @@ namespace DespieceArmarios.Form
         private System.Windows.Forms.Label lblOrejaDerechaDesc;
         private System.Windows.Forms.Panel pnlOrejaIzquierdaDesc;
         private System.Windows.Forms.Label lblOrejaIzquierdaDesc;
-        private System.Windows.Forms.Button btnCargarGuias;
+        private System.Windows.Forms.Button btnGuias;
         private System.Windows.Forms.GroupBox grpbGuia;
         private System.Windows.Forms.Panel pnlGuia;
         private System.Windows.Forms.Panel panel8;
@@ -768,5 +1009,23 @@ namespace DespieceArmarios.Form
         private System.Windows.Forms.Panel pnlGuiaDesc;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox grpbHuecoCajonera;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lblHuecoAlto;
+        private System.Windows.Forms.NumericUpDown numHuecoAlto;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label lblHuecoFondo;
+        private System.Windows.Forms.NumericUpDown numHuecoFondo;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lblHuecoAncho;
+        private System.Windows.Forms.NumericUpDown numHuecoAncho;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label lblHuecoAltoDesc;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label lblHuecoFondoDesc;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label lblHuecoAnchoDesc;
     }
 }

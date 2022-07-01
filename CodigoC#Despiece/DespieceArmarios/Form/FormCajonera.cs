@@ -35,12 +35,16 @@ namespace DespieceArmarios.Form
         private void EngancharEventos()
         {
             btnSalir.Click += BtnSalir_Click;
-            btnGuardarDatos.Click += BtnGuardarDatos_Click;
+            btnSacarMedidas.Click += BtnGuardarDatos_Click;
+            btnGuias.Click += BtnGuias_Click;
+        }
+
+        private void BtnGuias_Click(object sender, EventArgs e)
+        {
         }
 
         private void BtnGuardarDatos_Click(object sender, EventArgs e)
         {
-
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -68,9 +72,9 @@ namespace DespieceArmarios.Form
         private void Configuracion()
         {
             ConfiguracionElementos.miForm(this);
-            ConfiguracionElementos.miButtonInicio(btnGuardarDatos);
+            ConfiguracionElementos.miButtonInicio(btnSacarMedidas);
             ConfiguracionElementos.miButtonInicio(btnSalir);
-            ConfiguracionElementos.miButtonInicio(btnCargarGuias);
+            ConfiguracionElementos.miButtonInicio(btnGuias);
         }
     }
 }

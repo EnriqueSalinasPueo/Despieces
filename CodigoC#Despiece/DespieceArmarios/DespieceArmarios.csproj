@@ -79,6 +79,9 @@
     <Reference Include="Dapper.Contrib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.Contrib.2.0.35\lib\net461\Dapper.Contrib.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -104,7 +107,9 @@
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
     </Reference>
@@ -131,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapaDatos\ClasesORM\Armario.cs" />
+    <Compile Include="CapaDatos\ClasesORM\GuiaCajon.cs" />
     <Compile Include="ClasesApoyo\ArmarioPiezas.cs" />
     <Compile Include="CapaDatos\CallBbdd.cs" />
     <Compile Include="CapaDatos\ClasesORM\DefinirHolgurasGruesos.cs" />
@@ -144,12 +150,26 @@
     <Compile Include="ClasesApoyo\DatosFormArmariosObra.cs" />
     <Compile Include="ClasesApoyo\DatosFormArmariosParticular.cs" />
     <Compile Include="ClasesApoyo\ExternalizarDatos.cs" />
+    <Compile Include="Enum\TipoGuiaCajon.cs" />
+    <Compile Include="Form\FormCajonera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormCajonera.Designer.cs">
+      <DependentUpon>FormCajonera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormArmariosParticular.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormArmariosParticular.Designer.cs">
       <DependentUpon>FormArmariosParticular.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormGuiaCajonera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormGuiaCajonera.Designer.cs">
+      <DependentUpon>FormGuiaCajonera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogicaNegocio\CalcularCajonera.cs" />
     <Compile Include="LogicaNegocio\CalculosArmarioCorrederoObra.cs" />
     <Compile Include="LogicaNegocio\CalculosArmarioParticular.cs" />
     <Compile Include="LogicaNegocio\EstimacionMaterial.cs" />
@@ -157,7 +177,7 @@
     <Compile Include="CapaDatos\Bd.cs" />
     <Compile Include="CapaDatos\ClasesORM\Cliente.cs" />
     <Compile Include="Form\EstilosForm\ConfiguracionElementos.cs" />
-    <Compile Include="CapaDatos\ClasesORM\Guia.cs" />
+    <Compile Include="CapaDatos\ClasesORM\GuiaArmarioCorredero.cs" />
     <Compile Include="CapaDatos\ClasesORM\Pieza.cs" />
     <Compile Include="CapaDatos\ClasesORM\Obra.cs" />
     <Compile Include="CapaDatos\ClasesORM\Tablero.cs" />
@@ -217,11 +237,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form\FormCajonera.resx">
+      <DependentUpon>FormCajonera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormArmariosParticular.resx">
       <DependentUpon>FormArmariosParticular.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormDefinirHolgurasGruesos.resx">
       <DependentUpon>FormDefinirHolgurasGruesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormGuiaCajonera.resx">
+      <DependentUpon>FormGuiaCajonera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormImpresion.resx">
       <DependentUpon>FormImpresion.cs</DependentUpon>
@@ -353,6 +379,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
