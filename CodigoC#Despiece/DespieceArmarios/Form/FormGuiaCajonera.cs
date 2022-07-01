@@ -22,8 +22,7 @@ namespace DespieceArmarios.Form
         }
 
         private void CargarGrid()
-        {
-            Guias =  
+        { 
         }
     }
 }
